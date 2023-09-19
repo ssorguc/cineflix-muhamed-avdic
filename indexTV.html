@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CineFlix</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    type="text/css">
+</head>
+<body onload="setupTV()">
+
+  <div class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <p style="cursor: pointer;" onclick="window.location.href='index.html';">Cine</p>
+        <p style="margin-right: 30px; color: #2d7dd2; cursor: pointer;" onclick="window.location.href='index.html';">Flix</p>
+      </div>
+      <div class="navbar-menu">
+        <p onclick="window.location.href='index.html';" style="cursor: pointer; margin-top: 10px; margin-right: 15px;">Movies</p>
+        <p style="cursor: pointer; margin-top: 10px;" onclick="window.location.href='indexTV.html';">TV Shows</p>
+      </div>
+      <div class="navbar-searchbar">
+        <div class="search-container">
+          <div class="search-element">
+            <input onkeyup="searchBar(this.value)" id="input" class="navbar-input" type="text"
+              placeholder=" Search Movies/TV Shows" name="search">
+            <div class="search-list" id="search-list">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="movie-list-container">
+    <h1 class="movie-list-name">Popular</h1>
+    <div class="movie-list-wrapper">
+      <div id="popular" class="movie-list">
+
+      </div>
+      <svg role="img" aria-hidden="true" class="arrow" xmlns="http://www.w3.org/2000/svg" height="1em"
+        viewBox="0 0 320 512">
+        <path
+          d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="arrow-left" height="1em" viewBox="0 0 320 512">
+        <path
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+      </svg>
+    </div>
+  </div>
+
+  <div class="movie-list-container">
+    <h1 class="movie-list-name">Top Rated</h1>
+    <div class="movie-list-wrapper">
+      <div id="top-rated" class="movie-list">
+
+      </div>
+      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+        <path
+          d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="arrow-left" height="1em" viewBox="0 0 320 512">
+        <path
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+      </svg>
+    </div>
+  </div>
+
+  <div class="movie-list-container">
+    <h1 class="movie-list-name">Trending</h1>
+    <div class="movie-list-wrapper">
+      <div id="trending" class="movie-list">
+
+      </div>
+      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512">
+        <path
+          d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="arrow-left" height="1em" viewBox="0 0 320 512">
+        <path
+          d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+      </svg>
+    </div>
+  </div>
+
+
+  <div id="bodyy" class="movieWatcher">
+
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>CineFlix</title>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    </head>
+    <body onload="fillPage()">
+      <div class="navbar">
+        <div class="navbar-container">
+          <div class="logo">
+            <p style="cursor: pointer;" onclick="lwindow.location.href='index.html';">Cine</p>
+            <p style="margin-right: 30px; color: #2d7dd2; cursor: pointer;" onclick="window.location.href='index.html';">Flix</p>
+          </div>
+          <div class="navbar-menu">
+            <p onclick="window.location.href='index.html';" style="cursor: pointer; margin-top: 10px; margin-right: 15px;">Movies</p>
+            <p style="cursor: pointer; margin-top: 10px;" onclick="window.location.href='indexTV.html';">TV Shows</p>
+          </div>
+          <div class="navbar-searchbar">
+            <div class="search-container">
+              <div class="search-element">
+                <input onkeyup="searchBar(this.value)" id="input" class="navbar-input" type="text"
+                  placeholder=" Search Movies" name="search">
+                <div class="search-list" id="search-list">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class = "container">
+        <div class = "result-container">
+            <div class = "result-grid" id = "result-grid">
+                
+            </div>
+        </div>
+    </div>
+
+      <div id="openMovie">
+      
+      </div>
+      <script src="app.js"></script>
+    </body>
+</html>

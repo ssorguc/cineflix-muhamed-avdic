@@ -1,0 +1,298 @@
+:root{
+    --md-dark-color: #1d1d1d;
+    --dark-color: #171717;
+    --light-dark-color: #292929;
+    --yellow-color: #d4aa11;
+}
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    color: white;
+    background-color: #44534d;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: #0a0f0d;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    color: white;    
+    font-family: 'Bree Serif', serif;
+}
+
+.logo{
+    display: flex;
+    align-items: center; 
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.navbar-menu{
+    display: flex;
+    align-items: center;  
+    font-size: 20px;
+}
+
+.navbar-searchbar{
+    float: right;
+    position: absolute;
+    right: 0%;
+}
+
+.navbar-input{
+    width:350px;
+    height:25px;
+    border: none;
+    background-color: rgba(255, 255, 255);
+    margin-top: 10px;
+    margin-right: 20px;
+ 
+}
+
+.navbar-button{
+    background-color: #0a0f0d;
+    color: #f2f2f2;
+    float: right;
+    padding: 5px 10px;
+    margin-right: 16px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.movie-list-container{
+    padding: 20px;
+}
+
+.movie-list-name{
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list{
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+    transition: all 0.75s ease-in-out;
+    padding-top: 15px;
+}
+
+.movie-list-item{
+    margin-right: 20px;
+    position: relative;
+    text-align: center;
+}
+
+.movie-list-item:hover .movie-list-item-image{
+    transform: scale(1.1);
+    opacity: 20%;
+}
+
+.movie-list-item:hover .movie-list-item-title{
+    opacity: 100%;
+}
+
+.movie-list-item-image{
+    height: 250px;
+    transition: all 0.5s ease-in-out;
+    padding-bottom: 25px;
+}
+
+.movie-list-item-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150%;
+    font-weight: bold;
+    opacity: 0%;
+    transition: all 0.5s ease-in-out
+}
+
+.arrow {
+    font-size: 120px;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    color: rgb(255, 255, 255);
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.arrow-left {
+    font-size: 120px;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    color: rgb(255, 255, 255);
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.search-container{
+    background-color: var(--md-dark-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.search-element{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+}
+
+.search-element h3{
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-right: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.search-element .form-control{
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    outline: none;
+    color: var(--light-dark-color);
+    width: 350px;
+}
+
+.search-list{
+    position: absolute;
+    right: 0;
+    top: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    z-index: 10;
+}
+.search-list .search-list-item{
+    background-color: #474747;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--dark-color);
+    width: calc(350px - 8px);
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: background-color 200ms ease;
+    -o-transition: background-color 200ms ease;
+    transition: background-color 200ms ease;
+}
+
+.search-list .search-list-item:Hover{
+    background-color: #1f1f1f;
+}
+.search-list-item{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.search-item-thumbnail img{
+    width: 40px;
+    margin-right: 1rem;
+}
+.search-item-info h3{
+    font-weight: 600;
+    font-size: 1rem;
+}
+.search-item-info p{
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    opacity: 0.6;
+}
+
+.result-grid{
+    display: flex;
+}
+
+.movie-poster img{
+    max-width: 300px;
+    margin: 15px;
+    border: none;
+}
+
+.movie-title{
+    flex:1;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.movie-misc-info{
+    flex:1;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    margin-left: 15px;
+    list-style-type: none
+}
+.movie-info .year{
+    margin-left: 15px;
+}
+.movie-info .rated{
+    margin-left: 15px;
+}
+.movie-info .released{
+    margin-left: 15px;
+}
+.movie-info .writer{
+    flex:1;
+    margin-left: 15px;
+}
+.movie-info .genre{
+    flex:1;
+    margin-left: 15px;
+}
+.movie-info .plot{
+    flex:1;
+    margin-left: 15px;
+    max-width: 400px;
+}
+.movie-info .actors{
+    flex:1;
+    margin-left: 15px;
+}
+
+#openMovie{
+    margin: 15px;
+}
